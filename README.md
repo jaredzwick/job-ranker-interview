@@ -9,14 +9,7 @@ Build a small service that accepts a list of job postings and returns the Top K 
 ```json
 {
   "query": "senior backend engineer with Kafka and distributed systems",
-  "k": 3,
-  "jobs": [
-    {
-      "id": "1",
-      "title": "Backend Engineer",
-      "description": "Build distributed systems using Kafka and Go"
-    }
-  ]
+  "k": 3
 }
 ```
 
@@ -56,7 +49,7 @@ You may ask AI to generate, refactor, debug, or test code. **You are responsible
 }
 ```
 
-Use it as the `jobs` input for larger-scale testing (relevance quality, latency, memory). For the API contract you implement, the `jobs` array in the request body is still the source of truth — the file is provided so you don't have to invent test data.
+Load this file into your service and rank against it when a request comes in.
 
 ## Getting started
 
